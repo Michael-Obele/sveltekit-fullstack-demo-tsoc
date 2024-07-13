@@ -1,52 +1,51 @@
 <script lang="ts">
-/** @type {import('./$types').ActionData} */
-export let form;
+  /** @type {import('./$types').ActionData} */
+  export let form;
 </script>
 
 <div
-  class="mt-10 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
+  class="mx-auto mt-10 w-full max-w-xl rounded-lg bg-white/30 p-12 pt-10 shadow-xl ring-1 ring-gray-900/5 backdrop-blur-lg dark:bg-white/10"
 >
   <form method="POST" action="?/login">
-    <div class="flex flex-wrap -mx-3 mb-2">
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="email"
-            >
-              Email
-            </label>
-            <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="email"
-              type="text"
-              placeholder="Enter email"
-              name="email"
-            />
-        </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+    <div class="-mx-3 mb-2 flex flex-wrap">
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+          id="email"
+          type="text"
+          placeholder="Enter email"
+          name="email"
+        />
+      </div>
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+        <label
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
           for="password"
         >
           Password
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
           id="password"
           type="text"
           placeholder="Enter password"
           name="password"
         />
-    
       </div>
-      <!-- <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+      <!-- <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+            <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-state">
               Email
             </label>
           </div> -->
       <button
         type="submit"
-        class="bg-yellow-500 hover:bg-blue-700 text-white font-bold mt-5 ml-2 px-2 rounded "
+        class="ml-2 mt-5 rounded bg-yellow-500 px-2 font-bold text-white hover:bg-blue-700"
       >
         Login In
       </button>
@@ -60,89 +59,91 @@ export let form;
 </div>
 
 <div
-  class="m-20 pt-10 w-full max-w-xl p-12 mx-auto rounded-lg shadow-xl dark:bg-white/10 bg-white/30 ring-1 ring-gray-900/5 backdrop-blur-lg"
+  class="m-20 mx-auto w-full max-w-xl rounded-lg bg-white/30 p-12 pt-10 shadow-xl ring-1 ring-gray-900/5 backdrop-blur-lg dark:bg-white/10"
 >
   <form method="POST" action="?/pay">
-    <div class="flex flex-wrap -mx-3 mb-2">
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="email"
-            >
-              Email
-            </label>
-            <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="email"
-              type="text"
-              placeholder="Enter email"
-              name="email"
-            />
-        </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+    <div class="-mx-3 mb-2 flex flex-wrap">
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+          id="email"
+          type="text"
+          placeholder="Enter email"
+          name="email"
+        />
+      </div>
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+        <label
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
           for="password"
         >
           Password
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
           id="password"
           type="text"
           placeholder="Enter password"
           name="password"
         />
-    
       </div>
-      <!-- <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+      <!-- <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+            <label class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700" for="grid-state">
               Email
             </label>
           </div> -->
-          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="paymail"
-            >
-              Paymail
-            </label>
-            <input
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="paymail"
-              type="text"
-              placeholder="Enter paymail"
-              name="paymail"
-            />
-        </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+          for="paymail"
+        >
+          Paymail
+        </label>
+        <input
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+          id="paymail"
+          type="text"
+          placeholder="Enter paymail"
+          name="paymail"
+        />
+      </div>
+      <div class="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+        <label
+          class="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
           for="amount"
         >
           amount
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          class="block w-full appearance-none rounded border border-gray-200 bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
           id="amount"
           type="text"
           placeholder="Enter amount"
           name="amount"
         />
-    
       </div>
 
       <button
         type="submit"
-        class="bg-yellow-500 hover:bg-blue-700 text-white font-bold mt-5 ml-2 px-2 rounded "
+        class="ml-2 mt-5 rounded bg-yellow-500 px-2 font-bold text-white hover:bg-blue-700"
       >
         Pay
       </button>
     </div>
   </form>
-  {#if form?.success}
+  {#if form?.success && form.payment}
     <!-- this message is ephemeral; it exists because the page was rendered in
 		   response to a form submission. it will vanish if the user reloads -->
-    <p class="pt-2">The payment was successful. Here is your <a href="https://whatsonchain.com/tx/{form?.payment}">transaction</a>!</p>
+    <p class="pt-2">
+      The payment was successful. Here is your <a
+        href="https://whatsonchain.com/tx/{form?.payment}">transaction</a
+      >!
+    </p>
   {/if}
 </div>

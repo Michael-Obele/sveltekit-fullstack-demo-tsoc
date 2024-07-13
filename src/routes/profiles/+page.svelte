@@ -64,4 +64,7 @@
 		   response to a form submission. it will vanish if the user reloads -->
     <p class="pt-2">Added new Applicant!</p>
   {/if}
+  {#if form?.error}
+    <p class="font-semibold text-red-600">{form.message}</p>
+  {/if}
 </div>

@@ -24,7 +24,10 @@ export const actions: Actions = {
       typeof name !== 'string' ||
       typeof id !== 'number'
     ) {
-      return fail(400, { error: true });
+      return fail(400, {
+        error: true,
+        message: 'Invalid input format. Please ensure the following:',
+      });
     }
     const user = await db.user.update({
       where: {
@@ -47,7 +50,10 @@ export const actions: Actions = {
       },
     });
     if (!userExist) {
-      return fail(400, { error: true });
+      return fail(400, {
+        error: true,
+        message: 'The user you are trying to access does not exist.',
+      });
     }
 
     await db.user.delete({
@@ -71,7 +77,11 @@ export const actions: Actions = {
       },
     });
     if (userExist) {
-      return fail(400, { error: true });
+      return fail(400, {
+        error: true,
+        message:
+          'A user with the specified details already exists. Please choose a different username or email.',
+      });
     }
 
     await db.user.create({

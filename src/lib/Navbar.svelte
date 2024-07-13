@@ -1,10 +1,13 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { Menu } from 'lucide-svelte';
   import { afterUpdate } from 'svelte';
   let defaultTab =
-    'block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0';
+    'block py-1 px-3 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0';
   let activeTab =
-    'block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0';
+    'block py-1 mb-3 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0';
+
+  $: show = false;
 
   const menu = [
     { href: '/', routeName: 'Home' },
@@ -35,6 +38,7 @@
       >
     </a>
     <button
+      on:click={() => (show = !show)}
       data-collapse-toggle="navbar-default"
       type="button"
       class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
@@ -42,23 +46,13 @@
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
-      <svg
-        class="h-5 w-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"
-        />
-      </svg>
+      <Menu />
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+    <div
+      class:hidden={!show}
+      class="w-full md:block md:w-auto"
+      id="navbar-default"
+    >
       <ul
         class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse"
       >
