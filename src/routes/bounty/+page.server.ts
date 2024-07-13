@@ -18,11 +18,6 @@ export const actions = {
     instance = new Root(square);
     await instance.connect(signer);
 
-    // const deployTx = await instance.deploy(bounty);
-    // console.log(
-    //   'smart lock deployed : https://whatsonchain.com/tx/' + deployTx.id
-    // );
-
     try {
       const deployTx = await instance.deploy(bounty);
       console.log(
@@ -48,10 +43,10 @@ export const actions = {
         'contract unlocked successfully : https://whatsonchain.com/tx/' +
           callTx.id
       );
-      return { success: true, txid: callTx.id };
+      return { unlock: true, txid: callTx.id };
     } catch (error: any) {
       console.log(error.message);
-      return { success: false, txid: error.message };
+      return { unlock: false, txid: error.message };
     }
   },
 };
