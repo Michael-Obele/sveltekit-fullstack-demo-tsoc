@@ -1,11 +1,14 @@
 import NeucronSDK from "neucron-sdk";
 
+
+
 /** @type {import('./$types').Actions} */
 export const actions = {
 
     login: async ({ request }) => {
         const data = await request.formData();
-
+        let email = data.get('email')
+        let password = data.get('password')
 
         const neucron = new NeucronSDK();
 
@@ -52,17 +55,19 @@ export const actions = {
         // const xPubKeys = await walletModule.getXPubKeys({ walletId: walletCreation1.walletID });
         // console.log(xPubKeys);
 
-        return { success: true, balance: DefaultWalletBalance.data.balance.summary };
+        return { success: true, login: true, balance: DefaultWalletBalance.data.balance.summary };
     },
     pay: async ({ request }) => {
         const data = await request.formData();
+        let email = data.get('email')
+        let password = data.get('password')
 
         const neucron = new NeucronSDK();
 
         const authModule = neucron.authentication;
         const walletModule = neucron.wallet;
 
-        const loginResponse = await authModule.login({ email: data.get('email'), password: data.get('password') });
+        const loginResponse = await authModule.login({ email, password });
         console.log(loginResponse);
 
 
